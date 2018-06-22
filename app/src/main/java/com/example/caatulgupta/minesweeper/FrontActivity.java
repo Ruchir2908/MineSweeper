@@ -34,6 +34,8 @@ public class FrontActivity extends AppCompatActivity {
         finish();
     }
 
+
+    //First change in front activity
 }
 
 
