@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public MButton[][] board;
     public int r[];
     public int c[];
+    public boolean firstClick;
 
     public static final int MINE = -1;
     public static final int BLANK = 0;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         rootLayout = findViewById(R.id.rootLayout);
         setUpBoard();
+        firstClick = false;
 
     }
 
@@ -247,6 +249,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             MButton button = (MButton) view;
             //int id = view.getId();
             if (button.getValue() == MINE) {
+//                if(!firstClick){
+//                    setUpBoard();
+//                    firstClick = true;
+//                }
                 Toast.makeText(this, "GAME OVER !!", Toast.LENGTH_LONG).show();
                 currentStatus = false;
                 showBoard();
